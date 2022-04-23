@@ -1,0 +1,29 @@
+<p>{{registerForm.get('username')?.errors | json}}</p>
+<form [formGroup]="registerForm" style="width:500px;">
+    <div class="form-grounp">
+        <label for="username">Username</label>
+        <input class="form-control" type="text" formControlName="username">
+        <app-show-validate [formField]="registerForm.get('username')" key="Username">
+        </app-show-validate>
+    </div>
+    <div class="form-grounp">
+        <label for="">Pass</label>
+        <input type="text" class="form-control" formControlName="password">
+        <app-show-validate [formField]="registerForm.get('password')" key="Pass">
+        </app-show-validate>
+    </div>
+    <div class="form-grounp">
+        <label for="">Name</label>
+        <input type="text" class="form-control" formControlName="name">
+        <app-show-validate [formField]="registerForm.get('name')" key="Tên đăng ký">
+        </app-show-validate>
+    </div>
+    <div class="form-grounp">
+        <label for="">Mail</label>
+        <input type="text" class="form-control" formControlName="email">
+        <app-show-validate [formField]="registerForm.get('email')" key="Email">
+        </app-show-validate>
+    </div>
+
+    <div class="btn btn-success"><button>submit</button></div>
+</form>
